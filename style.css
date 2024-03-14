@@ -1,0 +1,110 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700");
+
+html, body {
+    height: 100%
+}
+body {
+    font: 14px/1 'Open Sans', sans-serif;
+    background-color: #eee;
+}
+
+main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 0 auto;
+
+    background-color: #fff;
+}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    margin: 10px 10px 20px;
+    line-height: 1.5;
+}
+
+
+input {
+    display: none;
+}
+
+section{
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ccc;
+}
+
+#tab0:checked ~ #content0,
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3{
+    display: block;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600x;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+
+}
+
+label::before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label:hover{
+    color: 888px;
+    cursor: pointer;
+}
+
+label[for*='0']:before {
+     /* For specific label*/
+    content: '\f015';
+}
+label[for*='1']:before {
+    content: '\f040';
+}
+
+label[for*='2']:before {
+    content: '\f16b';
+}
+
+label[for*='3']:before {
+    content: '\f11c';
+}
+
+input:checked + label {
+    color: #555;
+    border: 1px solid #ccc;
+    border-top: 2px solid red;
+    border-bottom: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    label {
+      font-size: 0;
+    }
+
+    label:before {
+      font-size: 30;
+    }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
